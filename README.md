@@ -1,6 +1,6 @@
-# MyFirstApp
+# Angular Course Project (Udemy)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+This project was produced by Udemy.com.  Throughout the course, we analyzed core concepts and theory behind each one.  Once the foundations of these concepts were discussed, we put them in practical use by building a full-featured Angular application to help solidify the theory for each concept.  I want to state formally that this application was NOT designed, but simply implemented given guidelines from Udemy.  I found this application to be extremely insightful for my personal knowledge of this technology.
 
 ## Development server
 
