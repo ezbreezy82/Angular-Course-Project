@@ -26,7 +26,7 @@ The following is a list of the concepts that were outlined by this course:
 * Routing
     * Setting up static routes
     * Navigation with `routerLink`
-    * Absolute vs releative paths
+    * Absolute vs relative paths
     * Navigating programmatically with the `router`
     * Passing and fetching route parameters
     * Passing and fetching query parameters and fragments
