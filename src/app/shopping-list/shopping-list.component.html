@@ -1,7 +1,6 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-shopping-edit></app-shopping-edit>
-    <hr>
+    <app-shopping-edit *ngIf="authService.isAuthenticated()"></app-shopping-edit>
     <ul class="list-group">
       <a
        style="cursor: pointer;"
