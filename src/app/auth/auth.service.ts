@@ -10,6 +10,17 @@ export class AuthService {
 
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(
+                (response) => {
+                    this.router.navigate(['/recipes']);
+                    firebase.auth().currentUser.getIdToken()
+                        .then(
+                            (token: string) => {
+                                this.token = token;
+                            }
+                        )
+                }
+            )
             .catch(
                 (error) => {
                     console.log(error);
@@ -21,7 +32,7 @@ export class AuthService {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then(
                 (response) => {
-                    this.router.navigate(['/']);
+                    this.router.navigate(['/recipes']);
                     firebase.auth().currentUser.getIdToken()
                         .then(
                             (token: string) => {

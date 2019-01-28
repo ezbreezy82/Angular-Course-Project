@@ -9,6 +9,8 @@ import * as firebase from 'firebase';
 export class AppComponent implements OnInit {
   loadedFeature: string = 'recipe';
 
+  constructor() {}
+
   ngOnInit() {
     firebase.initializeApp({
       apiKey: "AIzaSyCRfNwUr1IfWi_GvIQIKshulFkLFi5IfsI",

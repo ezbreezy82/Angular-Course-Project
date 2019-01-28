@@ -6,7 +6,7 @@ import { AuthService } from "../auth/auth.service";
 
 @Injectable()
 export class DataStorageService {
-    private baseURL: string = 'https://ng-recipe-book-9fafe.firebaseio.com/'
+    baseURL: string = 'https://ng-recipe-book-9fafe.firebaseio.com/'
 
     constructor(private http: Http,
                 private recipeService: RecipeService,
@@ -30,11 +30,10 @@ export class DataStorageService {
                     }
                     return recipes;
                 }
-            )
-            .subscribe(
-                (recipes: Recipe[]) => {
-                    this.recipeService.setRecipes(recipes);
-                }
             );
+    }
+
+    deleteRecipe(recipe: Recipe) {
+        return this.http.get(this.baseURL + 'recipes/name/' + recipe.name);
     }
 }
