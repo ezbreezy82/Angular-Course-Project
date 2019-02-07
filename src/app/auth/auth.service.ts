@@ -1,10 +1,11 @@
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable()
 export class AuthService {
     token: string;
+    invalidUserEmitter = new EventEmitter<boolean>();
 
     constructor(private router: Router) {}
 
@@ -43,7 +44,7 @@ export class AuthService {
             )
             .catch(
                 (error) => {
-                    console.log(error);
+                    this.invalidUserEmitter.emit(true);
                 }
             )
     }

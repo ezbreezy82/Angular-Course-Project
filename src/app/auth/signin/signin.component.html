@@ -9,6 +9,7 @@
           <label for="password">Pasword</label>
           <input type="password" id="password" name="password" ngModel class="form-control">
         </div>
+        <span class="help-block" *ngIf="invalidCredentials">The email and password does not exist! Please enter valid credentials.</span>
         <button class="btn btn-primary" type="submit">Sign in</button>
       </form>
     </div>
