@@ -1,4 +1,5 @@
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 import { Router } from '@angular/router';
 import { Injectable, EventEmitter } from '@angular/core';
 
